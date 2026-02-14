@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> 
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="justcalculate/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="justcalculate/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="justcalculate/favicon-16x16.png">
+    <link rel="manifest" href="justcalculate/site.webmanifest">
+    <style>
+    body {
+        background: linear-gradient(to bottom, #001f3f, #000011);
+        color: #ffffff;
+        font-family: 'Playfair Display', serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    main.thanks-main {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .thanks-container {
+        text-align: center;
+        max-width: 480px;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 30px 25px;
+        border-radius: 12px;
+        border: 1px solid #ffd70055;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    .success-icon {
+        width: 250px; 
+        height: 250px; 
+        margin: 0 auto 20px;
+        display: block;
+    }
+
+    .thanks-container h1 {
+        color: #ffd700;
+        font-size: 2em;
+        margin-bottom: 8px;
+    }
+
+    .thanks-container p {
+        font-size: 1.1em;
+        color: #ddd;
+        margin-bottom: 25px;
+        line-height: 1.5;
+    }
+
+    .back-btn {
+        background: #ffd700;
+        color: #001f3f;
+        border: none;
+        padding: 12px 28px;
+        font-size: 1em;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: opacity 0.3s, transform 0.3s;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .back-btn:hover {
+        opacity: 0.85;
+        transform: translateY(-2px);
+    }
+
+    footer {
+        padding: 15px;
+        text-align: center;
+        font-size: 0.9em;
+        color: #aaa;
+        border-top: 1px solid #ffd70033;
+    }
+
+    @media (max-width: 480px) {
+        .thanks-container {
+            padding: 20px 15px;
+            max-width: 95%;
+        }
+
+        .thanks-container h1 {
+            font-size: 1.6em;
+        }
+
+        .thanks-container p {
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+
+        .success-icon {
+            width: 140px;
+            height: 140px;
+            margin-bottom: 12px;
+        }
+
+        .back-btn {
+            padding: 10px 22px;
+            font-size: 0.95em;
+            gap: 6px;
+        }
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    </style>
+
+</head>
+<body>
+    <main class="thanks-main">
+        <div class="thanks-container">
+
+            <lottie-player 
+                id="successLottie"
+                class="success-icon"
+                src="https://assets9.lottiefiles.com/packages/lf20_jbrw3hcz.json" 
+                background="transparent" 
+                speed="0.8" 
+                autoplay>
+            </lottie-player>
+
+            <h1>Thank You!</h1>
+            <p>Your feedback has been delivered successfully.<br>We truly appreciate your thoughts and will use them to make this tool even better.</p>
+
+            <button class="back-btn" onclick="window.location.href='index.html'">
+                <i class="fas fa-arrow-left"></i> Back to Calculator
+            </button>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Calculator • Crafted with Elegance</p>
+    </footer>
+</body>
+</html>

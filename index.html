@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="justcalculate/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="justcalculate/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="justcalculate/favicon-16x16.png">
+    <link rel="manifest" href="justcalculate/site.webmanifest">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-calculator"></i> Just Calculate </h1>
+    </header>
+    <main>
+        <div class="container">
+            <label for="currency"><i class="fas fa-money-bill-wave"></i> Select Currency:</label>
+            <select id="currency">
+                <option value="$">USD ($)</option>
+                <option value="€">EUR (€)</option>
+                <option value="£">GBP (£)</option>
+                <option value="¥">JPY (¥)</option>
+            </select>
+
+            <label for="operation"><i class="fas fa-cogs"></i> Select Operation:</label>
+            <select id="operation">
+                <option value="percentage">Percentage (%)</option>
+                <option value="addition">Addition (+)</option>
+                <option value="subtraction">Subtraction (-)</option>
+                <option value="multiplication">Multiplication (×)</option>
+                <option value="division">Division (÷)</option>
+            </select>
+
+            <div id="inputs" class="inputs-container"></div>
+            <button id="calculate" type="button">
+                <i class="fas fa-equals"></i> Calculate
+            </button>
+
+            <button id="clear" type="button">
+                <i class="fas fa-times"></i> Clear
+            </button>
+
+
+            <div id="result" class="result"></div>
+        </div>
+
+        <!-- Multi % Tax/Fees Section -->
+        <section id="multi-percent">
+            <h2><i class="fas fa-calculator"></i> Calculate Tax Box 2, 4, 6 at Once</h2>
+            <p class="section-desc">Enter your amount once and instantly see 1.45%, 6.2%, and 22% breakdowns (e.g. FICA, Social Security, Income Tax estimates)</p>
+
+            <div class="multi-container">
+                <div class="input-group">
+                    <label for="multi-amount"><i class="fas fa-coins"></i> Enter Amount:</label>
+                    <input type="number" id="multi-amount" step="0.01" placeholder="e.g. 5000">
+                </div>
+
+                <button id="calc-multi" type="button">
+                    <i class="fas fa-equals"></i> Calculate Boxes
+                </button>
+
+                <button id="clear-multi" type="button">
+                    <i class="fas fa-eraser"></i> Clear
+                </button>
+
+
+                <div id="multi-results" class="multi-results"></div>
+            </div>
+        </section>
+        <section id="special">
+            <h2><i class="fas fa-star"></i> Special Calculations</h2>
+            <button id="sales-tax"><i class="fas fa-percentage"></i> USA Sales Tax (avg. 7%)</button>
+            <button id="tip-15"><i class="fas fa-hand-holding-usd"></i> 15% Tip/Discount</button>
+            <button id="tip-20"><i class="fas fa-hand-holding-usd"></i> 20% Tip/Discount</button>
+        </section>
+
+        <!-- Feedback Modal -->
+        <div id="feedbackModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">×</span>
+                <h2>Enjoying the Calculator?</h2>
+                <p>Your feedback matters! What should I add next?<br>Please share your thoughts 💭</p>
+                
+                <form
+                    id="feedbackForm"
+                    action="https://formspree.io/f/mvzbapoy"
+                    method="POST"
+                >
+                    <input type="hidden" name="_subject" value="Calculator Feedback">
+                    
+                    <label for="name">Name (optional)</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Your name"
+                        autocomplete="name"
+                    >
+
+                    <label for="email">Email (optional)</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="skyedesignssd@gmail.com"
+                        autocomplete="email"
+                    >
+
+                    <label for="message">Your thoughts or suggestions</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        required
+                        placeholder="e.g. Add mortgage calculator, dark mode toggle, calculation history..."
+                    ></textarea>
+
+                    <button type="submit" class="submit-feedback">
+                        Send Feedback
+                    </button>
+                </form>
+
+
+                <p class="form-note">Powered by Formspree • We never spam</p>
+            </div>
+        </div>
+    </main>
+<footer>
+    <p>© 2026 Calculator • Crafted with Elegance</p>
+    <p class="footer-contact">
+        Contact the developer if you need a professional website developed<br>
+        (banking platform, crypto dashboard, investment tracker, etc.)
+    </p>
+    <p>
+        <a href="https://codewithskye.github.io" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-portrait"></i> Visit my portfolio: codewithskye.github.io
+        </a>
+    </p>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>
