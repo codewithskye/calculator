@@ -176,8 +176,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="value">${currency}${(amount * 0.062).toFixed(2)}</div>
             </div>
             <div class="result-box">
-                <h3>Box 2 (22%)</h3>
-                <div class="value">${currency}${(amount * 0.22).toFixed(2)}</div>
+                <h3>Box 2 (3%)</h3>
+                <div class="value">${currency}${(amount * 0.03).toFixed(2)}</div>
             </div>
         `;
     }
